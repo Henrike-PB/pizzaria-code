@@ -1,0 +1,353 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+SK:wght@100..400&display=swap');
+
+/* Variáveis de cor */
+:root {
+    --vermelho: #7e1a22;
+    --vermelhoClaro: #cc2c34;
+    --rosa: #dc5464;
+    --verde: #049444;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Playwrite SK', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-y: overlay;
+}
+
+/* configuração do scroll reveal */
+ .section3, .conteudo, .menu{
+    visibility: hidden;
+  }
+
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    text-align: center;
+    background-color: var(--vermelho);
+    color: #fff;
+    padding: 1em 0;
+
+    z-index: 100;
+}
+
+
+/* ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; 
+    justify-content: space-evenly;
+} */
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease-out; 
+    z-index: 1001;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+ .nav-link {
+    text-decoration: none;
+    color: white;
+} 
+
+
+
+
+
+
+.menu-hamburger {
+    display: block;
+    text-align: right;
+    padding: 10px;
+    position: relative;
+    z-index: 1002;
+}
+
+.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    
+}
+
+@media (min-width: 769px) {
+    .nav {
+        display: flex;
+        position: static;
+        background-color: transparent;
+        z-index: auto;
+        transform: translateY(0);
+    }
+
+    .menu-hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        transform: translateY(-100%); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--vermelho); 
+        flex-direction: column;
+        z-index: 1001;
+    }
+
+    .nav.open {
+        transform: translateY(0); 
+        z-index: 1001;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+.onda-1{
+   
+    transform: translateY(-8%);
+}
+
+/* Seção da logo */
+.logo-icone img {
+    max-width: 100%; 
+    height: auto; 
+    filter: drop-shadow( 0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.logo-icone {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+@media screen and (max-width: 768px) {
+    .logo-icone img {
+        width: 80%; 
+    }
+}
+
+
+/* Carrossel */
+
+.section2{
+    margin-top: 10%;
+   
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+   
+}
+
+/* Botões de navegação do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--vermelho);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* CARDÀPIO */
+
+.cardapio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-details {
+    padding: 15px;
+}
+
+.item-name {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.item-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Formulário de pedido */
+.formulario {
+    background:rgba(221, 221, 221, 0.07);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de envio do formulário */
+.botao {
+    width: 100%;
+    background-color: var(--verde);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: var(--rosa);
+}
+
+/* Seção da frase */
+.frase {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+.onda-2{
+    transform: translateY(5%);
+}
+
+/* Estilos do footer */
+.footer {
+    background-color: var(--vermelho);
+    padding: 20px;
+    color: #F5D7DB;
+}
+
+ .footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+ 
+
+
+.buttons-footer {
+display: flex;
+justify-content: space-between;
+width: 220px;
+padding: 1rem;
+text-align: center;
+}
+
+.buttons-footer a {
+    color: antiquewhite;
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.buttons-footer a:hover {
+    color: var(--verde);
+}
+
+
+
+.copy-footer {
+  font-size: 1.15rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 600px) {
+  .footerContent {
+    flex-direction: column;
+  }
+}
+
+.copy-footer{
+ font-size: 12px;
+  font-weight: 500;
+
+}
+
+/* barra de rolagem */
+/* Adiciona uma scrollbar customizada */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+  }
+  
+  /* Estiliza o fundo da scrollbar (tornando-o transparente) */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Fundo transparente */
+  }
+  .dark-mode ::-webkit-scrollbar-track{
+    background-color: black;
+  }
+  
+  /* Estiliza o indicador da scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do indicador */
+    border-radius: 9px; /* Borda arredondada */
+  }
+  
+  /* Estiliza o indicador da scrollbar quando passa o mouse por cima */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor do indicador ao passar o mouse */
+  }
+  
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .frase {
+        font-size: 1.5rem;
+    }
+
+    /* .logo-icone {
+        max-width: 150px;
+    } */
+}
